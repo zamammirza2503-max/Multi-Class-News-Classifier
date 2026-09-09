@@ -1,4 +1,4 @@
-# Multi-Class News Classifier
+# Multi-Class News Classifier App
 
 An interactive news classification app that uses NLP to categorize news articles into 5 categories (Business, Sports, Technology, Entertainment, Politics) in real time. Built with a Bag of Words representation and classic machine learning models (Naive Bayes, Logistic Regression, Linear SVM) under the hood, with a Streamlit interface for live predictions.
 
