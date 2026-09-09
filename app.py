@@ -19,9 +19,9 @@ import streamlit as st
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from src.predict import load_artifacts, predict_with_confidence  # noqa: E402
 
-st.set_page_config(page_title="News Classifier", page_icon="📰", layout="centered")
+st.set_page_config(page_title="News Classifier", layout="centered")
 
-st.title("📰 Multi-Class News Classifier")
+st.title(" Multi-Class News Classifier")
 st.write(
     "Paste a news headline or short article below and this app will predict "
     "which category it belongs to, using a **Bag of Words + Machine Learning** model."

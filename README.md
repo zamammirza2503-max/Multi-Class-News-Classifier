@@ -1,18 +1,13 @@
-# 📰 Multi-Class News Classifier
+# Multi-Class News Classifier
 
-Multi-class text classification using NLP. Classifies news articles into **5 categories**
-(Business, Sports, Technology, Entertainment, Politics) using a **Bag of Words**
-representation and classic **machine learning** models (Naive Bayes, Logistic Regression,
-Linear SVM).
+An interactive news classification app that uses NLP to categorize news articles into 5 categories (Business, Sports, Technology, Entertainment, Politics) in real time. Built with a Bag of Words representation and classic machine learning models (Naive Bayes, Logistic Regression, Linear SVM) under the hood, with a Streamlit interface for live predictions.
 
-This is a beginner/intermediate friendly NLP project that runs **end-to-end, fully offline**
-— no API keys, no Kaggle downloads, no internet access required to get started.
-
+![Multi-Class News Classifier](docs/app.png)
 ![Architecture](docs/architecture.png)
 
 ---
 
-## ✨ Features
+## Features
 
 - Clean, modular project structure (`data/`, `src/`, `models/`, `docs/`)
 - Text preprocessing: lowercasing, punctuation/stopword removal, stemming
@@ -29,7 +24,7 @@ This is a beginner/intermediate friendly NLP project that runs **end-to-end, ful
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 Multi-Class-News-Classifier/
@@ -59,7 +54,7 @@ Multi-Class-News-Classifier/
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Raw News Text → Text Preprocessing → Bag of Words → ML Classifier → Predicted Category
@@ -72,7 +67,7 @@ See [`docs/architecture.png`](docs/architecture.png) for the full diagram, gener
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone & install dependencies
 
@@ -118,7 +113,7 @@ Or run it without arguments for interactive mode:
 python src/predict.py
 ```
 
-### 5. (Optional) Launch the web app
+### 5. Launch the web app
 
 ```bash
 streamlit run app.py
@@ -129,7 +124,7 @@ in your own headlines.
 
 ---
 
-## 📊 Results
+## Results
 
 With the included synthetic dataset, all three models reach very high accuracy
 (the synthetic data uses distinct vocabulary per category, which is ideal for
@@ -147,7 +142,7 @@ running `train.py` for your own results.
 
 ---
 
-## 🔄 Using a Real Dataset (Optional, Recommended Next Step)
+## Using a Real Dataset
 
 The included dataset is synthetic so the project works immediately with zero setup.
 For a more realistic project, swap in a real news dataset:
@@ -173,7 +168,7 @@ No other code changes are required — `train.py` works with any CSV that has
 
 ---
 
-## 🧠 How It Works (Beginner Explanation)
+## How It Works 
 
 1. **Bag of Words** turns each article into a vector of word counts — it ignores grammar
    and word order, just counts how often each word (or word pair) appears.
@@ -186,7 +181,7 @@ No other code changes are required — `train.py` works with any CSV that has
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - Python 3.10+
 - [scikit-learn](https://scikit-learn.org/) — Bag of Words (`CountVectorizer`) & ML models
@@ -197,17 +192,6 @@ No other code changes are required — `train.py` works with any CSV that has
 
 ---
 
-## 📈 Possible Improvements (Great "Intermediate" Extensions)
-
-- Swap `CountVectorizer` for `TfidfVectorizer` and compare results
-- Add cross-validation and hyperparameter tuning (`GridSearchCV`)
-- Try word embeddings (Word2Vec, GloVe) or a transformer-based model (e.g. DistilBERT)
-- Deploy the Streamlit app to Streamlit Community Cloud or Hugging Face Spaces
-- Add unit tests for `preprocess.py` and `predict.py`
-- Track experiments with MLflow
-
----
-
-## 📄 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
